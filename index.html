@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Roberth Namoc - Portfolio</title>
+  <link rel="preload" href="assets/day.jpg" as="image">
+  <link rel="preload" href="assets/night.jpg" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="mode-toggle">
+    <button id="toggleMode" aria-label="Toggle dark/light mode">🌙</button>
+  </div>
+
+  <header>
+    <div class="profile-container">
+      <img src="assets/profile.png" alt="Roberth Namoc's Profile Picture" class="profile-image" id="profilePicture">
+      <h1 class="name">Roberth Namoc</h1>
+      <p class="tagline">Front-End Designer | Web & System Developer</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/6xpencer" target="_blank" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook Icon"></a>
+        <a href="https://x.com/RoberthPendrin4" target="_blank" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter Icon"></a>
+        <a href="https://www.linkedin.com/in/spencer-scott-5478b8264/" target="_blank" aria-label="LinkedIn"><img src="assets/linkedin.png" alt="LinkedIn Icon"></a>
+        <a href="https://github.com/quadratic03" target="_blank" aria-label="GitHub"><img src="assets/github.png" alt="GitHub Icon"></a>
+      </div>
+    </div>
+  </header>
+
+  <aside id="profileDialog" class="dialog">
+    <div class="dialog-content">
+      <h2>My Details</h2>
+      <p><strong>Name:</strong> Roberth Namoc</p>
+      <p><strong>Age:</strong> 24</p>
+      <p><strong>Email:</strong> <a href="mailto:kristinedais10@gmail.com">kristinedais10@gmail.com</a></p>
+      <p><strong>Contact:</strong> +639853234710</p>
+      <p><strong>Location:</strong> Cagayan de Oro, Philippines</p>
+      <button id="backButton" class="back-btn">Back</button>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m an IT student passionate about crafting user-friendly websites and systems. My projects highlight my expertise in front-end design, web development, and system architecture.</p>
+    </section>
+
+    <section id="skills">
+      <div id="particles-js"></div>
+      <div id="fireflies"></div>
+      <div id="birds"></div>
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MySQL</li>
+        <li>Figma</li>
+        <li>Canva</li>
+        <li>NoSQL</li>
+        <li>Git & GitHub</li>
+        <li>Responsive Design</li>
+        <li>UI/UX Design</li>
+        <li>SQL/Database</li>
+        <li>Dart (Flutter)</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card fire">
+          <h3>Project 1: E-commerce Website</h3>
+          <p>A fully functional e-commerce platform built with React.js and Node.js.</p>
+        </div>
+        <div class="project-card fire">
+          <h3>Project 2: Task Management System</h3>
+          <p>A task management app designed with MongoDB and Express.js.</p>
+        </div>
+        <div class="project-card fire">
+          <h3>Project 3: Personal Portfolio</h3>
+          <p>This portfolio showcasing my skills and projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm" action="https://formspree.io/f/xexampleid" method="POST" class="contact-form">
+        <div class="form-field">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <span class="glow-effect"></span>
+        </div>
+        <div class="form-field">
+          <input type="email" name="email" placeholder="Your Email" required>
+          <span class="glow-effect"></span>
+        </div>
+        <div class="form-field">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <span class="glow-effect"></span>
+        </div>
+        <button type="submit" class="back-btn pulse">Send Message</button>
+      </form>
+      <p id="formStatus" class="form-status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Roberth Namoc</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
