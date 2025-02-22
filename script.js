@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     formStatus.textContent = 'Sending...';
     formStatus.classList.add('visible');
-
+  
     const formData = new FormData(contactForm);
     try {
       const response = await fetch(contactForm.action, {
@@ -73,19 +73,24 @@ document.addEventListener('DOMContentLoaded', () => {
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
-
+  
       if (response.ok) {
         formStatus.textContent = 'Message sent successfully!';
         contactForm.reset();
         setTimeout(() => {
           formStatus.classList.remove('visible');
-          setTimeout(() => formStatus.textContent = '', 300); // Clear after fade
+          setTimeout(() => formStatus.textContent = '', 300);
         }, 3000);
       } else {
-        throw new Error('Failed to send message');
+        const errorData = await response.json();
+        formStatus.textContent = `Error: ${errorData.error || 'Something went wrong. Please try again.'}`;
+        setTimeout(() => {
+          formStatus.classList.remove('visible');
+          setTimeout(() => formStatus.textContent = '', 300);
+        }, 3000);
       }
     } catch (error) {
-      formStatus.textContent = 'Error sending message. Please try again.';
+      formStatus.textContent = 'Network error. Please check your connection and try again.';
       setTimeout(() => {
         formStatus.classList.remove('visible');
         setTimeout(() => formStatus.textContent = '', 300);
